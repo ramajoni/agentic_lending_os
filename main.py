@@ -13,7 +13,7 @@ from app.api.controllers.applications import router as applications_router
 from app.api.controllers.analytics import router as analytics_router
 # from app.api.controllers.customer import router as customer_router
 # from app.api.controllers.reviewer import router as reviewer_router
-from app.api.controllers.manager import router as manager_router
+# from app.api.controllers.manager import router as manager_router
 from app.api.middleware.guardrail import InputGuardrailMiddleware
 from app.models.api_schemas import ErrorResponse
 from app.config.logger import setup_logging, get_logger
@@ -64,7 +64,7 @@ app.include_router(applications_router)
 app.include_router(analytics_router)
 # app.include_router(customer_router)
 # app.include_router(reviewer_router)
-app.include_router(manager_router)
+# app.include_router(manager_router)
 
 
 @app.exception_handler(RequestValidationError)
