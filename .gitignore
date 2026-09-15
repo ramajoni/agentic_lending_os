@@ -1,0 +1,9 @@
+#files
+.env
+
+
+#folders
+.pytest_cache
+logs/
+__pycache__/
+plan

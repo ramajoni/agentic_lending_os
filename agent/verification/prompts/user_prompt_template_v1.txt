@@ -1,0 +1,16 @@
+## Current Investigation State
+
+**Applicant ID**: {applicant_id}
+**Iteration**: {iteration_count}/{max_iterations}
+
+### Discrepancies Found
+{discrepancies_text}
+
+### Investigation History
+{tool_history_text}
+
+### Task
+Based on the discrepancies and your investigation so far, decide your next action.
+If you have enough information, choose a terminal action. Otherwise, use an investigation tool.
+
+Respond with a JSON object as specified in your instructions.

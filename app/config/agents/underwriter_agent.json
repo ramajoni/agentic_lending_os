@@ -1,0 +1,18 @@
+{
+  "agent_id": "underwriter_agent",
+  "name": "Senior Loan Underwriting Agent",
+  "description": "Reviews escalated applications and makes credit decisions",
+  "allowlisted_tools": [
+    "query_credit_policy",
+    "calculate_debt_to_income",
+    "request_counter_offer",
+    "escalate_to_human",
+    "approve_application",
+    "reject_application"
+  ],
+  "terminal_tools": [
+    "approve_application",
+    "reject_application",
+    "escalate_to_human"
+  ]
+}

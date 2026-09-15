@@ -1,0 +1,12 @@
+{
+  "agent_id": "kyc_collector_agent",
+  "name": "KYC Document Collection Agent",
+  "description": "Collects and validates missing KYC documents from applicants",
+  "allowlisted_tools": [
+    "request_additional_document",
+    "reverify_alternate_source"
+  ],
+  "terminal_tools": [
+    "request_additional_document"
+  ]
+}

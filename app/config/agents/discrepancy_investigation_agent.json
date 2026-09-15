@@ -1,0 +1,20 @@
+{
+  "agent_id": "discrepancy_investigation_agent",
+  "name": "Loan Discrepancy Investigation Agent",
+  "description": "Investigates document mismatches and discrepancies against verification sources",
+  "allowlisted_tools": [
+    "reverify_alternate_source",
+    "verify_pan",
+    "verify_aadhaar",
+    "query_historical_cases",
+    "check_fraud_watchlist",
+    "auto_clear",
+    "escalate_to_human",
+    "request_additional_document"
+  ],
+  "terminal_tools": [
+    "auto_clear",
+    "escalate_to_human",
+    "request_additional_document"
+  ]
+}
