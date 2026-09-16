@@ -32,12 +32,6 @@ async def generate_mock_token(payload: TokenRequest):
     return AuthController.login(username=payload.username, role=payload.role, password=payload.password)
 
 
-@router.post("/login", response_model=TokenResponse)
-async def login(payload: TokenRequest):
-    """Authenticate and receive a JWT token."""
-    return AuthController.login(username=payload.username, role=payload.role, password=payload.password)
-
-
 @router.get("/me", response_model=AuthenticatedUser)
 async def me(current_user: AuthenticatedUser = Depends(get_current_user)):
     """Fetch profile of currently authenticated user."""
