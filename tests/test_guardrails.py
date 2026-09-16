@@ -4,9 +4,9 @@ Unit tests for individual guardrails.
 
 import asyncio
 import pytest
-from app.api.guardrails.input_validator import validate_input, InputValidationError
-from app.shared.guardrails.injection_scanner import scan_text, scan_fields
-from app.shared.guardrails.pii_redactor import redact_text, redact_dict
+from app.guardrails.input_validator import validate_input, InputValidationError
+from app.guardrails.injection_scanner import scan_text, scan_fields
+from app.guardrails.pii_redactor import redact_text, redact_dict
 from agent.verification.guardrails.tool_allowlist import validate_tool_call
 from dag.guardrails.api_validator import validate_pan, validate_gstin, validate_aadhaar, validate_api_params, APIValidationError
 from agent.verification.guardrails.confidence_router import evaluate_confidence, ConfidenceRouting

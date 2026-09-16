@@ -1,7 +1,7 @@
 """
 Centralized logging configuration.
 
-Log files are written to logs/log_<date>.log at project root.
+Log files are written to logs/app_log_<date>.log at project root.
 """
 
 import logging
@@ -26,7 +26,7 @@ def setup_logging(level: int = logging.INFO, log_dir: str | Path | None = None) 
     log_dir.mkdir(parents=True, exist_ok=True)
 
     date_str = datetime.now().strftime("%Y-%m-%d")
-    log_file = log_dir / f"log_{date_str}.log"
+    log_file = log_dir / f"app_log_{date_str}.log"
 
     logger = logging.getLogger("guardrail_poc")
 

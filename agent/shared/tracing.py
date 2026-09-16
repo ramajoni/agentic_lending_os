@@ -3,7 +3,7 @@ Tracing and execution logging helpers for agents.
 """
 
 from app.config.logger import get_logger
-from app.shared.guardrails.pii_redactor import redact_for_logging
+from app.guardrails.pii_redactor import redact_for_logging
 
 log = get_logger(__name__)
 

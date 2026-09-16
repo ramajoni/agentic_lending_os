@@ -6,19 +6,12 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from app.db import init_db
-# from app.api.routes.verification import router as verification_router
-from app.api.controllers.auth import router as auth_router
-from app.api.controllers.applications import router as applications_router
-from app.api.controllers.analytics import router as analytics_router
-# from app.api.controllers.customer import router as customer_router
-# from app.api.controllers.reviewer import router as reviewer_router
-# from app.api.controllers.manager import router as manager_router
-from app.api.middleware.guardrail import InputGuardrailMiddleware
-from app.models.api_schemas import ErrorResponse
+from app.utils.db_util import init_db
+from app.router import api_v1_router
+from app.guardrails.middleware import InputGuardrailMiddleware
+from app.schema.api_schemas import ErrorResponse
 from app.config.logger import setup_logging, get_logger
-# from app.utils.openobserver_util import OpenObserver
-from app.config.app_constants import openobserver_config
+from app.constants.app_constants import openobserver_config
 
 # Initialize logging and SQLite database on startup
 setup_logging()
@@ -58,13 +51,7 @@ app.add_middleware(
 app.add_middleware(InputGuardrailMiddleware)
 
 # Register routes
-# app.include_router(verification_router)
-app.include_router(auth_router)
-app.include_router(applications_router)
-app.include_router(analytics_router)
-# app.include_router(customer_router)
-# app.include_router(reviewer_router)
-# app.include_router(manager_router)
+app.include_router(api_v1_router)
 
 
 @app.exception_handler(RequestValidationError)

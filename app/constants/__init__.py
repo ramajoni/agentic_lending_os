@@ -1,5 +1,5 @@
 """
-Backward compatibility bridge. Re-exports from app.constants.app_constants.
+Application constants and centralized environment variable loading.
 """
 
 from app.constants.app_constants import (
@@ -31,3 +31,4 @@ __all__ = [
     "api_config",
     "openobserver_config",
 ]
+
